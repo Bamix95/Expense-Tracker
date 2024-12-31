@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Include Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Include your own JS script -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Budget<span>Buddy</span></h1>
+      <div class="balance">
+        <p>Total Balance:</p>
+        <p class="balance_bal">$0:00</p>
+      </div>
+      <div class="trans">
+        <div class="trans_btn">
+          <button class="expense">Expenses</button>
+          <button class="income">Income</button>
+        </div>
+        <!-- Add Canvas for Pie Chart -->
+        <div class="canvas_container">
+          <canvas id="incomeExpenseChart" width="200" height="200"></canvas>
+        </div>
+      </div>
+      <form novalidate id="form">
+        <div class="form_control">
+          <label for="expense">Transaction Type</label>
+          <input
+            type="text"
+            placeholder="Enter Transaction Type"
+            class="expense_type"
+          />
+        </div>
+        <div class="form_control">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            placeholder="Enter The Amount..."
+            class="amount"
+          />
+        </div>
+        <button type="submit" class="submit_btn">Submit</button>
+      </form>
+      <div class="modal_container">
+        <div class="modal_content"></div>
+      </div>
+    </main>
+  </body>
+</html>
